@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#wrap{
+				height: 100px;
+				width: 100px;
+				padding: 100px;
+				border: 1px solid #000000;
+				margin: 100px auto;
+				transform-style: preserve-3d;
+				perspective: 500px;
+				perspective-origin: right top; 
+				transform: scale(2);
+				
+			}
+			
+			#box{
+				height: 100px;
+				width: 100px;
+				position: relative;
+				transform-style: preserve-3d;
+				transition: 2s;
+			}
+			
+			#wrap:hover #box{
+				transform: rotateX(360deg);
+			}
+			
+			#box div{
+				height: 100px;
+				width: 100px;
+				position: absolute;
+				left: 0;
+				top:0;
+				background: red;
+				text-align: center;
+				font:50px/100px "微软雅黑";
+				color: #000;
+			}
+			
+			#box div:nth-child(2){
+				top:-100px;
+				background: yellow;
+				transform: rotateX(90deg);
+				transform-origin: bottom;
+			}
+			#box div:nth-child(3){
+				left:100px;
+				background: green;
+				transform: rotateY(90deg);
+				transform-origin: left;
+			}
+			#box div:nth-child(4){
+				top:100px;
+				background: pink;
+				transform: rotateX(-90deg);
+				transform-origin: top;
+			}
+			#box div:nth-child(5){
+				left:-100px;
+				background: gray;
+				transform: rotateY(-90deg);
+				transform-origin: right;
+			}
+			#box div:nth-child(6){
+				transform: translateZ(-100px) rotateX(180deg);
+				background: blueviolet;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<div id="box">
+				<div>1</div>
+				<div>2</div>
+				<div>3</div>
+				<div>4</div>
+				<div>5</div>
+				<div>6</div>
+			</div>
+		</div>
+	</body>
+</html>
